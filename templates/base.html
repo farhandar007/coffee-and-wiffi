@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %} my secret  {% endblock %}</title>
+       {% block styles %}
+            <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+       {% endblock %}
+
+    </head>
+    <body>
+
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+
+    </body>
+</html>
